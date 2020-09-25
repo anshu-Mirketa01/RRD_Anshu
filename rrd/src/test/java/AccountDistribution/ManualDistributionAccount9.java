@@ -94,6 +94,8 @@ public class ManualDistributionAccount9 {
 
 		for (int rowNum = 2; rowNum <= rowCount; rowNum++) {
 			
+			
+			
 			String Assigneduser = reader.getCellData("AccountAllocation9", "ExpectedResultAfterDistribution", rowNum);
 			String Teamname = reader.getCellData("AccountAllocation9", "TeamName", rowNum);
 			String ToBecount = reader.getCellData("AccountAllocation9", "ToBeAssignedAfterdistribution", rowNum);
