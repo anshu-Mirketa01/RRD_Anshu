@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="260194" started-at="2020-09-21T18:54:18 IST" finished-at="2020-09-21T18:58:39 IST">
+  <suite name="Default suite" duration-ms="306636" started-at="2020-09-25T12:33:13 IST" finished-at="2020-09-25T12:38:20 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="260194" started-at="2020-09-21T18:54:18 IST" finished-at="2020-09-21T18:58:39 IST">
-      <class name="AccountDistribution.ManualDistributionAccount9">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:AccountDistribution.ManualDistributionAccount9@396f6598]" name="setUp" is-config="true" duration-ms="38229" started-at="2020-09-21T18:54:18 IST" finished-at="2020-09-21T18:54:57 IST">
+    <test name="Default test" duration-ms="306636" started-at="2020-09-25T12:33:13 IST" finished-at="2020-09-25T12:38:20 IST">
+      <class name="DemoScenario_one.CaseAllocation_config31">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:DemoScenario_one.CaseAllocation_config31@396f6598]" name="setUp" is-config="true" duration-ms="37263" started-at="2020-09-25T12:33:13 IST" finished-at="2020-09-25T12:33:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="AccountManualDistribution9()[pri:0, instance:AccountDistribution.ManualDistributionAccount9@396f6598]" name="AccountManualDistribution9" duration-ms="220846" started-at="2020-09-21T18:54:57 IST" finished-at="2020-09-21T18:58:37 IST">
+        <test-method status="PASS" signature="CaseCreation_config31()[pri:0, instance:DemoScenario_one.CaseAllocation_config31@396f6598]" name="CaseCreation_config31" duration-ms="268195" started-at="2020-09-25T12:33:50 IST" finished-at="2020-09-25T12:38:18 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AccountManualDistribution9 -->
-        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:AccountDistribution.ManualDistributionAccount9@396f6598]" name="teardown" is-config="true" duration-ms="1052" started-at="2020-09-21T18:58:37 IST" finished-at="2020-09-21T18:58:39 IST">
+        </test-method> <!-- CaseCreation_config31 -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:DemoScenario_one.CaseAllocation_config31@396f6598]" name="teardown" is-config="true" duration-ms="1104" started-at="2020-09-25T12:38:18 IST" finished-at="2020-09-25T12:38:20 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AccountManualDistribution9 status=SUCCESS method=ManualDistributionAccount9.AccountManualDistribution9()[pri:0, instance:AccountDistribution.ManualDistributionAccount9@396f6598] output={null}]]]>
+                <![CDATA[[TestResult name=CaseCreation_config31 status=SUCCESS method=CaseAllocation_config31.CaseCreation_config31()[pri:0, instance:DemoScenario_one.CaseAllocation_config31@396f6598] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- AccountDistribution.ManualDistributionAccount9 -->
+      </class> <!-- DemoScenario_one.CaseAllocation_config31 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
