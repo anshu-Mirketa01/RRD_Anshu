@@ -171,78 +171,7 @@ package DemoScenario_one;
 				caseobj.pickcaseorigin(CaseOrigin);
 				logger.log(LogStatus.INFO, "Successfully picked case origin ");
 				
-				caseobj.clickcearchcontact();
-				logger.log(LogStatus.INFO, "Successfully clicked on search contact ");
 				
-				contactPage contactobj = PageFactory.initElements(driver, contactPage.class);
-				contactobj.clickOnContact();
-				logger.log(LogStatus.INFO, "Successfully clicked on New contact and pop up opens");
-				
-				contactobj.clickonsaluation();
-				logger.log(LogStatus.INFO, "Successfully clicked on Salutation");
-				
-				contactobj.picksaluationfromlist(saluationtest);
-				logger.log(LogStatus.INFO, "Successfully picked from Salutation");
-				
-				contactobj.sendfirstname(firstname);
-				logger.log(LogStatus.INFO, "Successfully enter firstname");
-				
-				contactobj.sendLastname(lastName);
-				
-				logger.log(LogStatus.INFO, "Successfully enter firstname");
-				contactobj.clickonsave();
-				
-				logger.log(LogStatus.INFO, "Successfully clicked on save");
-				//scrolling
-			    
-				caseobj.scrolldowntosearchAcc();
-				 
-				 caseobj.clicksearchAcc();
-			     logger.log(LogStatus.INFO, "Successfully clicked the search Account value ");
-				
-				 Accountpage Accobj = PageFactory.initElements(driver, Accountpage.class);
-				 Accobj.clickOnNewAccount();
-			     logger.log(LogStatus.INFO, "Successfully clicked on New  Account ");
-				 
-				 Accobj.ClickonAccountName(Account);
-				 logger.log(LogStatus.INFO, "Enter account name");
-				
-				 Accobj.clickingRating();
-				 logger.log(LogStatus.INFO, "click on Rating Type");
-				
-				 Accobj.pickrating(Ratingval);
-				 logger.log(LogStatus.INFO, "Picked  Rating Type");
-				 
-				 Accobj.saveaccount();
-				 logger.log(LogStatus.INFO, "Successfully clicked on save");
-					//scrolling
-				 caseobj.scrolldowntopicktype();
-				 logger.log(LogStatus.INFO, "Scroll down to pick Type from drop down");
-				 
-				 caseobj.pickfromType(RRDType);
-				 logger.log(LogStatus.INFO, "Successfully picked from type ");
-				
-				 caseobj.scrolldowntopickcasereason();
-				 logger.log(LogStatus.INFO, "Scroll down to pick Case Reason from drop down");
-				 
-				 
-				 caseobj.pickfromcasereason(RRDCaseReason);
-				 logger.log(LogStatus.INFO, "Successfully picked from case reason ");
-				
-				 caseobj.scrolldowntoviewwebinfo();
-				 logger.log(LogStatus.INFO, "Scroll down to View Web Info details");
-				 
-				 caseobj.TypeWebemail(WebEmailtext);
-				 logger.log(LogStatus.INFO, "Successfully entered the email ");
-				 
-				/*
-				 * caseobj.TypeWebCompany(Webcompany); logger.log(LogStatus.INFO,
-				 * "Successfully entered the company"); Thread.sleep(1500);
-				 * caseobj.TypeWebName(Webname); logger.log(LogStatus.INFO,
-				 * "Successfully entered the name"); Thread.sleep(1500);
-				 * caseobj.TypeWebPhone(Webphone); logger.log(LogStatus.INFO,
-				 * "Successfully entered the phone"); Thread.sleep(1500);
-				 */
 				 caseobj.scrolldowntoviewdescinfo();
 				 logger.log(LogStatus.INFO, "Scroll down to View Description Info ");
 				 

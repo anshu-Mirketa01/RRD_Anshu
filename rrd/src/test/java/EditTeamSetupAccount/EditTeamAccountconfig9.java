@@ -35,7 +35,7 @@ public class EditTeamAccountconfig9 {
 
 	@BeforeMethod
 	public void setUp() throws FileNotFoundException, InterruptedException {
-		report = new ExtentReports("./Report/DefineTeamSetup.html");
+		report = new ExtentReports("./Report/EditTeamSetup.html");
 		logger = report.startTest("Verify add  Define Team Setup ");
 		logger.log(LogStatus.INFO, "Open Browser and type url in address bar");
 		driver = BrowserFactory.getBrowser("chrome");

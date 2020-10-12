@@ -219,18 +219,7 @@ package CaseCreation_Allocation;
 				 Accobj.saveaccount();
 				 logger.log(LogStatus.INFO, "Successfully clicked on save");
 					//scrolling
-				 caseobj.scrolldowntopicktype();
-				 logger.log(LogStatus.INFO, "Scroll down to pick Type from drop down");
-				 
-				 caseobj.pickfromType(RRDType);
-				 logger.log(LogStatus.INFO, "Successfully picked from type ");
 				
-				 caseobj.scrolldowntopickcasereason();
-				 logger.log(LogStatus.INFO, "Scroll down to pick Case Reason from drop down");
-				 
-				 
-				 caseobj.pickfromcasereason(RRDCaseReason);
-				 logger.log(LogStatus.INFO, "Successfully picked from case reason ");
 				
 				 caseobj.scrolldowntoviewwebinfo();
 				 logger.log(LogStatus.INFO, "Scroll down to View Web Info details");

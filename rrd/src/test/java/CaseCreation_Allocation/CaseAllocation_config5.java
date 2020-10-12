@@ -226,18 +226,6 @@ import com.mirketa.pages.RRDSearchpage;
 				 Accobj.saveaccount();
 				 logger.log(LogStatus.INFO, "Successfully clicked on save");
 					//scrolling
-				 caseobj.scrolldowntopicktype();
-				 logger.log(LogStatus.INFO, "Scroll down to pick Type from drop down");
-				 
-				 caseobj.pickfromType(RRDType);
-				 logger.log(LogStatus.INFO, "Successfully picked from type ");
-				
-				 caseobj.scrolldowntopickcasereason();
-				 logger.log(LogStatus.INFO, "Scroll down to pick Case Reason from drop down");
-				 
-				 
-				 caseobj.pickfromcasereason(RRDCaseReason);
-				 logger.log(LogStatus.INFO, "Successfully picked from case reason ");
 				
 				 caseobj.scrolldowntoviewwebinfo();
 				 logger.log(LogStatus.INFO, "Scroll down to View Web Info details");
@@ -245,14 +233,7 @@ import com.mirketa.pages.RRDSearchpage;
 				 caseobj.TypeWebemail(WebEmailtext);
 				 logger.log(LogStatus.INFO, "Successfully entered the email ");
 				 
-				/*
-				 * caseobj.TypeWebCompany(Webcompany); logger.log(LogStatus.INFO,
-				 * "Successfully entered the company"); Thread.sleep(1500);
-				 * caseobj.TypeWebName(Webname); logger.log(LogStatus.INFO,
-				 * "Successfully entered the name"); Thread.sleep(1500);
-				 * caseobj.TypeWebPhone(Webphone); logger.log(LogStatus.INFO,
-				 * "Successfully entered the phone"); Thread.sleep(1500);
-				 */
+				
 				 caseobj.scrolldowntoviewdescinfo();
 				 logger.log(LogStatus.INFO, "Scroll down to View Description Info ");
 				 
