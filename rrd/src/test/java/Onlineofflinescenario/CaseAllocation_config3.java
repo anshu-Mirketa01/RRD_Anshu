@@ -1,4 +1,4 @@
-package CaseCreation_Allocation;
+package Onlineofflinescenario;
 
 
 	
@@ -78,21 +78,21 @@ package CaseCreation_Allocation;
 		 * @author Anshu
 		 *
 		 */
-	public class CaseAllocation_config15 {
+	public class CaseAllocation_config3 {
 			
 			WebDriver driver;
 			ExtentReports report;
 			ExtentTest logger;
 			Properties pro;
 			
-			public String Testdata_sheet_path=System.getProperty("user.dir") +File.separator+"AppData"+File.separator+"CaseAllocation.xlsx";
+			public String Testdata_sheet_path=System.getProperty("user.dir") +File.separator+"AppData"+File.separator+"DemoOfflineOnline.xlsx";
 
 			SoftAssert softassert=new SoftAssert();
 			
 			@BeforeMethod
 			public void setUp() throws FileNotFoundException, InterruptedException {
-				report = new ExtentReports("./Report/CaseCreation15.html");
-				logger = report.startTest("Verify Case Creation15");
+				report = new ExtentReports("./Report/CaseCreation.html");
+				logger = report.startTest("Verify Case Creation3");
 				logger.log(LogStatus.INFO, "Open Browser and type url in address bar");
 				driver = BrowserFactory.getBrowser("chrome");
 				logger.log(LogStatus.INFO, "Salesforce login page is loading.");
@@ -122,31 +122,31 @@ package CaseCreation_Allocation;
 
 			
 			@Test
-			public void CaseCreation_config15() throws InterruptedException
+			public void CaseCreation_config3() throws InterruptedException
 			{
 				
 				Xls_Reader reader = new Xls_Reader(Testdata_sheet_path);
 				
-				int rowCount = reader.getRowCount("CaseAllocation_config15");
+				int rowCount = reader.getRowCount("CaseAllocation_config3");
 				for (int rowNum = 2; rowNum <= rowCount; rowNum++)
 				{
-				     String Status=reader.getCellData("CaseAllocation_config15", "Status", rowNum);
-					 String Priority=reader.getCellData("CaseAllocation_config15", "Priority", rowNum);
-					 String CaseOrigin=reader.getCellData("CaseAllocation_config15", "CaseOrigin", rowNum);
-					 String  saluationtest=reader.getCellData("CaseAllocation_config15", "Salutation", rowNum);
-					 String firstname=reader.getCellData("CaseAllocation_config15", "Firstname", rowNum);
-					 String lastName=reader.getCellData("CaseAllocation_config15", "LastName", rowNum);
-					 String Account=reader.getCellData("CaseAllocation_config15", "Account", rowNum);
-					 String Ratingval=reader.getCellData("CaseAllocation_config15", "Ratingtype", rowNum);
-					 String RRDType=reader.getCellData("CaseAllocation_config15", "RRDType", rowNum);
-					 String RRDCaseReason=reader.getCellData("CaseAllocation_config15", "RRDCaseReason", rowNum);
-				     String WebEmailtext=reader.getCellData("CaseAllocation_config15", "WebEmailtext", rowNum);
-				     String Subject=reader.getCellData("CaseAllocation_config15", "Subject", rowNum);
-				     String Description=reader.getCellData("CaseAllocation_config15", "Description", rowNum);
-				     String Internalcommnet=reader.getCellData("CaseAllocation_config15", "Internal comment", rowNum);
-				     String Assigneduser=reader.getCellData("CaseAllocation_config15", "ExpectedResult", rowNum);
-				     String Teamname=reader.getCellData("CaseAllocation_config15", "TeamName", rowNum);
-				     String ToBecount=reader.getCellData("CaseAllocation_config15", "ToBeAssigned", rowNum);
+				     String Status=reader.getCellData("CaseAllocation_config3", "Status", rowNum);
+					 String Priority=reader.getCellData("CaseAllocation_config3", "Priority", rowNum);
+					 String CaseOrigin=reader.getCellData("CaseAllocation_config3", "CaseOrigin", rowNum);
+					 String  saluationtest=reader.getCellData("CaseAllocation_config3", "Salutation", rowNum);
+					 String firstname=reader.getCellData("CaseAllocation_config3", "Firstname", rowNum);
+					 String lastName=reader.getCellData("CaseAllocation_config3", "LastName", rowNum);
+					 String Account=reader.getCellData("CaseAllocation_config3", "Account", rowNum);
+					 String Ratingval=reader.getCellData("CaseAllocation_config3", "Ratingtype", rowNum);
+					 String RRDType=reader.getCellData("CaseAllocation_config3", "RRDType", rowNum);
+					 String RRDCaseReason=reader.getCellData("CaseAllocation_config3", "RRDCaseReason", rowNum);
+				     String WebEmailtext=reader.getCellData("CaseAllocation_config3", "WebEmailtext", rowNum);
+				     String Subject=reader.getCellData("CaseAllocation_config3", "Subject", rowNum);
+				     String Description=reader.getCellData("CaseAllocation_config3", "Description", rowNum);
+				     String Internalcommnet=reader.getCellData("CaseAllocation_config3", "Internal comment", rowNum);
+				     String Assigneduser=reader.getCellData("CaseAllocation_config3", "ExpectedResult", rowNum);
+				     String Teamname=reader.getCellData("CaseAllocation_config3", "TeamName", rowNum);
+				     String ToBecount=reader.getCellData("CaseAllocation_config3", "ToBeAssigned", rowNum);
 				      
 				
 				RRD_New_Case_page caseobj = PageFactory.initElements(driver, RRD_New_Case_page.class);
@@ -158,7 +158,7 @@ package CaseCreation_Allocation;
 				
 				
 				//caseobj.pickstatus(Status);
-				logger.log(LogStatus.INFO, "Successfully picked status from list ");
+				//logger.log(LogStatus.INFO, "Successfully picked status from list ");
 				
 				caseobj.pickpriority();
 				
@@ -171,66 +171,9 @@ package CaseCreation_Allocation;
 				caseobj.pickcaseorigin(CaseOrigin);
 				logger.log(LogStatus.INFO, "Successfully picked case origin ");
 				
-				caseobj.clickcearchcontact();
-				logger.log(LogStatus.INFO, "Successfully clicked on search contact ");
 				
-				contactPage contactobj = PageFactory.initElements(driver, contactPage.class);
-				contactobj.clickOnContact();
-				logger.log(LogStatus.INFO, "Successfully clicked on New contact and pop up opens");
 				
-				contactobj.clickonsaluation();
-				logger.log(LogStatus.INFO, "Successfully clicked on Salutation");
 				
-				contactobj.picksaluationfromlist(saluationtest);
-				logger.log(LogStatus.INFO, "Successfully picked from Salutation");
-				
-				contactobj.sendfirstname(firstname);
-				logger.log(LogStatus.INFO, "Successfully enter firstname");
-				
-				contactobj.sendLastname(lastName);
-				
-				logger.log(LogStatus.INFO, "Successfully enter firstname");
-				contactobj.clickonsave();
-				
-				logger.log(LogStatus.INFO, "Successfully clicked on save");
-				//scrolling
-			    
-				caseobj.scrolldowntosearchAcc();
-				 
-				 caseobj.clicksearchAcc();
-			     logger.log(LogStatus.INFO, "Successfully clicked the search Account value ");
-				
-				 Accountpage Accobj = PageFactory.initElements(driver, Accountpage.class);
-				 Accobj.clickOnNewAccount();
-			     logger.log(LogStatus.INFO, "Successfully clicked on New  Account ");
-				 
-				 Accobj.ClickonAccountName(Account);
-				 logger.log(LogStatus.INFO, "Enter account name");
-				
-				 Accobj.clickingRating();
-				 logger.log(LogStatus.INFO, "click on Rating Type");
-				
-				 Accobj.pickrating(Ratingval);
-				 logger.log(LogStatus.INFO, "Picked  Rating Type");
-				 
-				 Accobj.saveaccount();
-				 logger.log(LogStatus.INFO, "Successfully clicked on save");
-					//scrolling
-				
-				 caseobj.scrolldowntoviewwebinfo();
-				 logger.log(LogStatus.INFO, "Scroll down to View Web Info details");
-				 
-				 caseobj.TypeWebemail(WebEmailtext);
-				 logger.log(LogStatus.INFO, "Successfully entered the email ");
-				 
-				/*
-				 * caseobj.TypeWebCompany(Webcompany); logger.log(LogStatus.INFO,
-				 * "Successfully entered the company"); Thread.sleep(1500);
-				 * caseobj.TypeWebName(Webname); logger.log(LogStatus.INFO,
-				 * "Successfully entered the name"); Thread.sleep(1500);
-				 * caseobj.TypeWebPhone(Webphone); logger.log(LogStatus.INFO,
-				 * "Successfully entered the phone"); Thread.sleep(1500);
-				 */
 				 caseobj.scrolldowntoviewdescinfo();
 				 logger.log(LogStatus.INFO, "Scroll down to View Description Info ");
 				 
@@ -301,6 +244,7 @@ package CaseCreation_Allocation;
 					  {
 					  System.out.println("Assertion issue"); e.printStackTrace();
 					  }
+					  
 					 
 				}
 				
@@ -319,7 +263,6 @@ package CaseCreation_Allocation;
 
 
 		}
-
 
 
 
