@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="OnlineUsers.Online_usertest">
+      <class name="EditTeamSetupAccount.EditTeamAccountconfig9">
         <methods>
-          <include name="onlineuser"/>
+          <include name="teardown"/>
+          <include name="setUp"/>
+          <include name="EditTeamsetup"/>
         </methods>
-      </class> <!-- OnlineUsers.Online_usertest -->
+      </class> <!-- EditTeamSetupAccount.EditTeamAccountconfig9 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

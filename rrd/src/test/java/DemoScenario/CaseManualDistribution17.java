@@ -70,7 +70,7 @@ public class CaseManualDistribution17 {
 	public void CaseManualDistribution9() throws InterruptedException {
 		Xls_Reader reader = new Xls_Reader(Testdata_sheet_path);
 
-		int rowCount = reader.getRowCount("DemoCase");
+		int rowCount = reader.getRowCount("AllocatedistributeDemo");
 
 		ManualDistributionPage manualdistribution = PageFactory.initElements(driver, ManualDistributionPage.class);
 		manualdistribution.clickOnManualdistribution();
@@ -88,10 +88,10 @@ public class CaseManualDistribution17 {
 
 		for (int rowNum = 2; rowNum <= rowCount; rowNum++) {
 			
-			String Assigneduser = reader.getCellData("DemoCase", "ExpectedResultAfterDistribution", rowNum);
-			String Teamname = reader.getCellData("DemoCase", "TeamName", rowNum);
-			String ToBecount = reader.getCellData("DemoCase", "ToBeAssignedAfterdistribution", rowNum);
-			String caseid = reader.getCellData("DemoCase", "CaseNo", rowNum);
+			String Assigneduser = reader.getCellData("AllocatedistributeDemo", "ExpectedResultAfterDistribution", rowNum);
+			String Teamname = reader.getCellData("AllocatedistributeDemo", "TeamName", rowNum);
+			String ToBecount = reader.getCellData("AllocatedistributeDemo", "ToBeAssignedAfterdistribution", rowNum);
+			String caseid = reader.getCellData("AllocatedistributeDemo", "CaseNo", rowNum);
 			
 			RRD_New_Case_page caseobj = PageFactory.initElements(driver, RRD_New_Case_page.class);
 			caseobj.clickOnDefineCase();

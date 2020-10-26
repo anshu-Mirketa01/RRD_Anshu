@@ -168,34 +168,21 @@ public class CaseAllocation_config1 {
 
 		Xls_Reader reader = new Xls_Reader(Testdata_sheet_path);
 
-		int rowCount = reader.getRowCount("DemoCase");
-		reader.addColumn("DemoCase", "CaseNo");
+		int rowCount = reader.getRowCount("AllocatedistributeDemo");
+		reader.addColumn("AllocatedistributeDemo", "CaseNo");
 		Thread.sleep(5000);
 		logger.log(LogStatus.INFO, "Add the new col Case No.");
 		for (int rowNum = 2; rowNum <= rowCount; rowNum++) {
-			//String Status = reader.getCellData("CaseAllocation_config1", "Status", rowNum);
-			//String saluationtest = reader.getCellData("CaseAllocation_config1", "Salutation", rowNum);
-			/*
-			 * String firstname = reader.getCellData("CaseAllocation_config1", "Firstname",
-			 * rowNum); String lastName = reader.getCellData("CaseAllocation_config1",
-			 * "LastName", rowNum); String Account =
-			 * reader.getCellData("CaseAllocation_config1", "Account", rowNum); String
-			 * Ratingval = reader.getCellData("CaseAllocation_config1", "Ratingtype",
-			 * rowNum); String RRDType = reader.getCellData("CaseAllocation_config1",
-			 * "RRDType", rowNum); String RRDCaseReason =
-			 * reader.getCellData("CaseAllocation_config1", "RRDCaseReason", rowNum); String
-			 * WebEmailtext = reader.getCellData("CaseAllocation_config1", "WebEmailtext",
-			 * rowNum);
-			 */
-			String Priority = reader.getCellData("DemoCase", "Priority", rowNum);
-			String CaseOrigin = reader.getCellData("DemoCase", "CaseOrigin", rowNum);
 			
-			String Subject = reader.getCellData("DemoCase", "Subject", rowNum);
-			String Description = reader.getCellData("DemoCase", "Description", rowNum);
-			String Internalcommnet = reader.getCellData("DemoCase", "Internal comment", rowNum);
-			String Assigneduser = reader.getCellData("DemoCase", "ExpectedResult", rowNum);
-			String Teamname = reader.getCellData("DemoCase", "TeamName", rowNum);
-			String ToBecount = reader.getCellData("DemoCase", "ToBeAssigned", rowNum);
+			String Priority = reader.getCellData("AllocatedistributeDemo", "Priority", rowNum);
+			String CaseOrigin = reader.getCellData("AllocatedistributeDemo", "CaseOrigin", rowNum);
+			
+			String Subject = reader.getCellData("AllocatedistributeDemo", "Subject", rowNum);
+			String Description = reader.getCellData("AllocatedistributeDemo", "Description", rowNum);
+			String Internalcommnet = reader.getCellData("AllocatedistributeDemo", "Internal comment", rowNum);
+			String Assigneduser = reader.getCellData("AllocatedistributeDemo", "ExpectedResult", rowNum);
+			String Teamname = reader.getCellData("AllocatedistributeDemo", "TeamName", rowNum);
+			String ToBecount = reader.getCellData("AllocatedistributeDemo", "ToBeAssigned", rowNum);
 
 			RRD_New_Case_page caseobj = PageFactory.initElements(driver, RRD_New_Case_page.class);
 			caseobj.clickOnDefineCase();
@@ -204,8 +191,7 @@ public class CaseAllocation_config1 {
 			caseobj.clickOnNew();
 			logger.log(LogStatus.INFO, "Successfully clicked on New case");
 
-			// caseobj.pickstatus(Status);
-			// logger.log(LogStatus.INFO, "Successfully picked status from list ");
+			
 
 			caseobj.pickpriority();
 
@@ -218,75 +204,7 @@ public class CaseAllocation_config1 {
 			caseobj.pickcaseorigin(CaseOrigin);
 			logger.log(LogStatus.INFO, "Successfully picked case origin ");
 
-			/*
-			 * caseobj.clickcearchcontact(); logger.log(LogStatus.INFO,
-			 * "Successfully clicked on search contact ");
-			 * 
-			 * contactPage contactobj = PageFactory.initElements(driver, contactPage.class);
-			 * contactobj.clickOnContact(); logger.log(LogStatus.INFO,
-			 * "Successfully clicked on New contact and pop up opens");
-			 * 
-			 * contactobj.clickonsaluation(); logger.log(LogStatus.INFO,
-			 * "Successfully clicked on Salutation");
-			 * 
-			 * contactobj.picksaluationfromlist(saluationtest); logger.log(LogStatus.INFO,
-			 * "Successfully picked from Salutation");
-			 * 
-			 * contactobj.sendfirstname(firstname); logger.log(LogStatus.INFO,
-			 * "Successfully enter firstname");
-			 * 
-			 * contactobj.sendLastname(lastName);
-			 * 
-			 * logger.log(LogStatus.INFO, "Successfully enter firstname");
-			 * contactobj.clickonsave();
-			 * 
-			 * logger.log(LogStatus.INFO, "Successfully clicked on save"); //scrolling
-			 * 
-			 * caseobj.scrolldowntosearchAcc();
-			 * 
-			 * caseobj.clicksearchAcc(); logger.log(LogStatus.INFO,
-			 * "Successfully clicked the search Account value ");
-			 * 
-			 * Accountpage Accobj = PageFactory.initElements(driver, Accountpage.class);
-			 * Accobj.clickOnNewAccount(); logger.log(LogStatus.INFO,
-			 * "Successfully clicked on New  Account ");
-			 * 
-			 * Accobj.ClickonAccountName(Account); logger.log(LogStatus.INFO,
-			 * "Enter account name");
-			 * 
-			 * Accobj.clickingRating(); logger.log(LogStatus.INFO, "click on Rating Type");
-			 * 
-			 * Accobj.pickrating(Ratingval); logger.log(LogStatus.INFO,
-			 * "Picked  Rating Type");
-			 * 
-			 * Accobj.saveaccount(); logger.log(LogStatus.INFO,
-			 * "Successfully clicked on save"); //scrolling caseobj.scrolldowntopicktype();
-			 * logger.log(LogStatus.INFO, "Scroll down to pick Type from drop down");
-			 * 
-			 * caseobj.pickfromType(RRDType); logger.log(LogStatus.INFO,
-			 * "Successfully picked from type ");
-			 * 
-			 * caseobj.scrolldowntopickcasereason(); logger.log(LogStatus.INFO,
-			 * "Scroll down to pick Case Reason from drop down");
-			 * 
-			 * 
-			 * caseobj.pickfromcasereason(RRDCaseReason); logger.log(LogStatus.INFO,
-			 * "Successfully picked from case reason ");
-			 * 
-			 * caseobj.scrolldowntoviewwebinfo(); logger.log(LogStatus.INFO,
-			 * "Scroll down to View Web Info details");
-			 * 
-			 * caseobj.TypeWebemail(WebEmailtext); logger.log(LogStatus.INFO,
-			 * "Successfully entered the email ");
-			 * 
-			 * 
-			 * caseobj.TypeWebCompany(Webcompany); logger.log(LogStatus.INFO,
-			 * "Successfully entered the company"); Thread.sleep(1500);
-			 * caseobj.TypeWebName(Webname); logger.log(LogStatus.INFO,
-			 * "Successfully entered the name"); Thread.sleep(1500);
-			 * caseobj.TypeWebPhone(Webphone); logger.log(LogStatus.INFO,
-			 * "Successfully entered the phone"); Thread.sleep(1500);
-			 */
+			
 			caseobj.scrolldowntoviewdescinfo();
 			logger.log(LogStatus.INFO, "Scroll down to View Description Info ");
 
@@ -310,7 +228,7 @@ public class CaseAllocation_config1 {
 			 logger.log(LogStatus.INFO, "Get The cas No. from case details page");
 			 
 			
-			reader.setCellData("DemoCase1", "CaseNo", rowNum, caseobj.getcaseno());
+			reader.setCellData("AllocatedistributeDemo", "CaseNo", rowNum, caseobj.getcaseno());
 		    driver.navigate().refresh();
 			 Thread.sleep(10000);
 
