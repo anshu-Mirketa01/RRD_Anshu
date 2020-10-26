@@ -305,26 +305,26 @@ package DemoScenario;
 							
 							driver.navigate().refresh();
 
-							/*
-							 * teamcriteria.scrolldowntoNewcriteria();
-							 * 
-							 * // System.out.println(teamcriteria.getMultipleCriteriaCount());
-							 * teamcriteria.navigateToCriteria();
-							 */
+							
+							  teamcriteria.scrolldowntoNewcriteria();
+							  
+							  // System.out.println(teamcriteria.getMultipleCriteriaCount());
+							  teamcriteria.navigateToCriteria();
+							 
 					
-							/*
-							 * try { if (logic!=null)
-							 * 
-							 * { teamcriteria.Editcriteria();
-							 * 
-							 * teamcriteria.AddCriteriaLogic(logic);
-							 * 
-							 * teamcriteria.submitcriteria();
-							 * 
-							 * teamcriteria.okalert();
-							 * 
-							 * } } catch (Exception e) { e.printStackTrace(); }
-							 */
+							
+							  try { if (logic!=null)
+							  
+							  { teamcriteria.Editcriteria();
+							  
+							  teamcriteria.AddCriteriaLogic(logic);
+							  
+							  teamcriteria.submitcriteria();
+							  
+							  teamcriteria.okalert();
+							  
+							  } } catch (Exception e) { e.printStackTrace(); }
+							 
 
 							// teamcriteria.addLogicAndSubmitCriteria(logic);
 						

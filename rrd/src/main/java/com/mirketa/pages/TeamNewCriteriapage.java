@@ -46,9 +46,11 @@ WebDriver driver;
 	
 	
 	@FindBy(xpath="//input[@name='j_id0:criteriaForm:pg:editCustomLogic' and @type='submit' and @value='Edit']")
+	//@FindBy(xpath="//*[@id='j_id0:criteriaForm:pg:editCustomLogic']")
 	WebElement Edit;
 	
 	@FindBy(xpath="//input[@name='j_id0:criteriaForm:pg:customFilterLogic' and @type='text']")
+	//@FindBy(xpath="//*[@id='j_id0:criteriaForm:pg:customFilterLogic']")
 	WebElement AddcriteriaLogicfield;
 	
 	@FindBy(xpath="//input[@name='j_id0:criteriaForm:pg:submitCustomLogic' and @class='btn' and @value='Submit']") 
@@ -60,7 +62,7 @@ WebDriver driver;
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		
 	driver.switchTo().frame(iframeCriteria);
-	Thread.sleep(3000);
+	Thread.sleep(5000);
 
         
     }
@@ -89,7 +91,7 @@ WebDriver driver;
 		SyncElement.TobeClickable(driver, Edit, 20);
 		Edit.click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 	
 	public void submitcriteria() throws InterruptedException
@@ -102,7 +104,7 @@ WebDriver driver;
 	
 	public void AddCriteriaLogic(String logic) throws InterruptedException
 	{
-		SyncElement.isElementPresnt(driver, AddcriteriaLogicfield, 20);
+		SyncElement.isElementPresnt(driver, AddcriteriaLogicfield, 40);
 		
 		AddcriteriaLogicfield.sendKeys(logic);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
